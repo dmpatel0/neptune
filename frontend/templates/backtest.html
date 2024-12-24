@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Input Your Data</h1>
+        <div id="form">
+            <form id="backtestForm">
+                <input name="ticker" type="text" placeholder="Stock Ticker" required>
+                <input name="cash" type="number" placeholder="Starting Cash" required>
+                <input name="sDate" type="date" placeholder="Start Date">
+                <input name="eDate" type="date" placeholder="End Date">
+                <select name="strat" type="text" placeholder="Strategy">
+                    <option value="SMA">SMA Crossover</option>
+                    <option value="EMA">EMA Crossover</option>
+                </select>
+            </form>
+            <div id="submitButton">
+                <button class="button" type="submit">BACKTEST</button>
+            </div>
+        </div>
+        <div id="metricsContainer">
+            <div id="labelContainer">
+                <div id="bhPercentLabel" class="labels">Buy & Hold Return [%]</div>
+                <div id="returnPercentLabel" class="labels">Strategy Return [%]</div>
+                <div id="returnAnnualLabel" class="labels">Annual Return [%]</div>
+                <div id="sharpeRatioLabel" class="labels">Sharpe Ratio</div>
+                <div id="annVolatilityLabel" class="labels">Ann. Volatility [%]</div>
+            </div>
+            <div id="valueContainer">
+                <div id="bhPercent" class="metrics">N/A</div>
+                <div id="returnPercent" class="metrics">N/A</div>
+                <div id="returnAnnual" class="metrics">N/A</div>
+                <div id="sharpeRatio" class="metrics">N/A</div>
+                <div id="annVolatility" class="metrics">N/A</div>
+            </div>
+        </div>
+        <div id="graphContainer"></div>
+    </div>
+    <script src="../static/js/app.js"></script>
+</body>
+</html>

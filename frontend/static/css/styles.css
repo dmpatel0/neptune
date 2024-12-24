@@ -1,0 +1,112 @@
+body {
+    background-color: #001f33; /* Midnight blue */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.8; /* Slight transparency */
+}
+
+.button {
+    background-color: #4a90e2; /* Light blue */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;  /* Align items vertically */
+    justify-content: space-between;  /* Evenly space out the inputs */
+    align-items: center;  /* Center all items horizontally */
+    height: 300px;  /* Adjust the height to control spacing */
+    width: 300px;   /* Set a width for the form container */
+    margin: 0 auto;  /* Center the form on the page */
+}
+
+.form input {
+    width: 80%;  /* Inputs take up 80% of the form's width */
+    padding: 10px;
+    margin-bottom: 10px;  /* Space between inputs */
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form #submitButton {
+    padding-top: 20px;
+    padding-bottom: 10vh;
+}
+
+#graphContainer {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border: 2px solid #4a90e2; /* Light blue border */
+    width: 90%; /* Full width */
+    height: 700px; /* Fixed height */
+    margin: 20px auto; /* Center the container */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Centering content horizontally */
+    align-items: center; /* Centering content vertically */
+    opacity: 0.8; /* Slight transparency */
+}
+
+#metricsContainer {
+    display: flex;
+    border: 3px solid white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 100vw;
+}
+
+#valueContainer, #labelContainer {
+    display: flex;
+    flex-direction: row;
+    border: black;
+    width: 100vw;
+}
+
+.labels {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 10px; 
+}
+.metrics {
+    text-align: center;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 8px 0px;
+    margin: 10px;
+}
