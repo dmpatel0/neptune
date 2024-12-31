@@ -1,12 +1,10 @@
-FROM neptune-base:1.3
+FROM --platform=$BUILDPLATFORM dmpatel0/neptune-base:latest
 
-WORKDIR /usr/src/app
+WORKDIR /usr/neptune
 
 COPY requirements.txt ./
 
 RUN pip3 install --no-cache-dir -r requirements.txt
-
-COPY . .
 
 EXPOSE 5000
 

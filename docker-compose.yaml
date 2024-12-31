@@ -1,0 +1,7 @@
+services:
+     neptune:
+          build: .
+          image: neptune-base:latest
+          ports: 
+               - "5000:5000"
+
