@@ -25,11 +25,11 @@ document.getElementById('submitButton').addEventListener('click', function(e) {
     .then(result => {
         metrics = result.response
 
-        document.getElementById('bhPercent').innerText = metrics['Buy & Hold Return [%]']
-        document.getElementById('returnPercent').innerText = metrics['Return [%]']
-        document.getElementById('returnAnnual').innerText = metrics['Return (Ann.) [%]']
-        document.getElementById('sharpeRatio').innerText = metrics['Sharpe Ratio']
-        document.getElementById('annVolatility').innerText = metrics['Volatility (Ann.) [%]']
+        document.getElementById('bhPercent').innerText = round(metrics['Buy & Hold Return [%]'])
+        document.getElementById('returnPercent').innerText = round(metrics['Return [%]'])
+        document.getElementById('returnAnnual').innerText = round(metrics['Return (Ann.) [%]'])
+        document.getElementById('sharpeRatio').innerText = round(metrics['Sharpe Ratio'])
+        document.getElementById('annVolatility').innerText = round(metrics['Volatility (Ann.) [%]'])
         
         fetch('api/load_graph')
             .then(response => response.text())
@@ -56,3 +56,9 @@ document.getElementById('submitButton').addEventListener('click', function(e) {
     })
     .catch(error => console.error('Error:', error));
 });
+
+// Round a number to three decimal places
+function round(number) {
+    const factor = Math.pow(10, 3);
+    return Math.round(number * factor) / factor;
+}
