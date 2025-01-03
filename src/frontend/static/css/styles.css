@@ -1,6 +1,35 @@
+:root {
+    --primary-color: #13315C;
+    --secondary-color: #0B2545;
+    --tertiary-color: #134074;
+    --primary-text-color: #EEF4ED;
+    --secondary-text-color: #8DA9C4;
+    
+}
+
+.navbar-custom {
+    background-color: var(--tertiary-color);
+    border-bottom: 1px solid black;
+}
+
+.navbar-text-custom {
+    color: var(--primary-text-color);
+}
+
+.navbar-text-custom:hover {
+    color: var(--secondary-text-color);
+}
+
+.input-custom, 
+.select-custom {
+    background-color: #26466b;
+    border-radius: 15px;
+    -webkit-text-fill-color: slategray !important;
+}
+
 body {
-    background-color: #022b68; /* Midnight blue */
-    color: white;
+    background-color: var(--primary-color); /* Midnight blue */
+    color: var(--primary-text-color);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -12,44 +41,6 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 2vh;
-}
-
-h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}z
-
-p {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    opacity: 0.8;
-}
-
-.button {
-    background-color: #4a90e2;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;  
-    justify-content: space-between;  
-    align-items: center;  
-    height: 300px;  
-    width: 300px;   
-    margin: 0 auto;  
-}
-
-.form input {
-    width: 80%;  
-    padding: 10px;
-    margin-bottom: 10px;  
 }
 
 #form {
@@ -77,21 +68,9 @@ p {
     opacity: 0.8;
 }
 
-#metricsContainer {
-    display: flex;
-    border: 3px solid white;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 15vh;
-    width: 100vw;
-}
-
-#valueContainer, #labelContainer {
-    display: flex;
-    flex-direction: row;
-    border: black;
-    width: 100vw;
+.metricContainer {
+    width: 20%;
+    justify-items: center;
 }
 
 .labels {
@@ -101,9 +80,12 @@ p {
     width: 80%;
     margin: 10px; 
 }
+
 .metrics {
     text-align: center;
-    background-color: black;
+    background-color: #26466b;
+    border: 1px solid white;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
     width: 80%;

@@ -1,47 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Data</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Input Your Data</h1>
-        <div id="form">
-            <form id="backtestForm">
-                <input name="ticker" type="text" placeholder="Stock Ticker" required>
-                <input name="cash" type="number" placeholder="Starting Cash" required>
-                <input name="sDate" type="date" placeholder="Start Date">
-                <input name="eDate" type="date" placeholder="End Date">
-                <select name="strat" type="text" placeholder="Strategy">
+{% extends 'base.html' %}
+{% block title %}Backtest{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-5">
+    <h1 class="text-center">Input Your Data</h1>
+    <div class="d-flex justify-content-center" id="form">
+        <form class="form-inline justify-content-center " id="backtestForm">
+            <div class="form-group mb-2">
+                <input name="ticker" class="input-custom form-control" id="ticker" type="text" placeholder="Ticker">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <input name="cash" class="input-custom form-control" id="cash" type="number" placeholder="Starting Cash">
+            </div>
+            <div class="form-group mb-2">
+                <input name="sDate" class="input-custom form-control" id="sDate" type="date" placeholder="Start Date">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <input name="eDate" class="input-custom form-control" id="eDate" type="date" placeholder="End Date">
+            </div>
+            <div class="form-group mb-2">
+                <select name="strat" class="select-custom form-control" id="strat" type="text" placeholder="Strategy">
                     <option value="SMA">SMA Crossover</option>
                     <option value="EMA">EMA Crossover</option>
                 </select>
-            </form>
-            <div id="submitButton">
-                <button class="button" type="submit">BACKTEST</button>
             </div>
+        </form>
+        <div id="submitButton">
+            <button class="btn btn-primary mb-2" type="submit">BACKTEST</button>
         </div>
-        <div id="metricsContainer">
-            <div id="labelContainer">
+    </div>
+    <div id="metricsContainer" class="d-flex flex-row justify-content-center w-100">
+        <div class="d-flex justify-content-center align-items-end w-75">
+            <div class="metricContainer">
                 <div id="bhPercentLabel" class="labels">Buy & Hold Return [%]</div>
-                <div id="returnPercentLabel" class="labels">Strategy Return [%]</div>
-                <div id="returnAnnualLabel" class="labels">Annual Return [%]</div>
-                <div id="sharpeRatioLabel" class="labels">Sharpe Ratio</div>
-                <div id="annVolatilityLabel" class="labels">Ann. Volatility [%]</div>
-            </div>
-            <div id="valueContainer">
                 <div id="bhPercent" class="metrics">N/A</div>
+            </div>
+            <div class="metricContainer">
+                <div id="returnPercentLabel" class="labels">Strategy Return [%]</div>
                 <div id="returnPercent" class="metrics">N/A</div>
+            </div>
+            <div class="metricContainer">
+                <div id="returnAnnualLabel" class="labels">Annual Return [%]</div>
                 <div id="returnAnnual" class="metrics">N/A</div>
+            </div>
+            <div class="metricContainer">
+                <div id="sharpeRatioLabel" class="labels">Sharpe Ratio</div>
                 <div id="sharpeRatio" class="metrics">N/A</div>
+            </div>
+            <div class="metricContainer">
+                <div id="annVolatilityLabel" class="labels">Ann. Volatility [%]</div>
                 <div id="annVolatility" class="metrics">N/A</div>
             </div>
         </div>
-        <div id="graphContainer"></div>
     </div>
-    <script src="../static/js/app.js"></script>
-</body>
-</html>
+    <div id="graphContainer"></div>
+</div>
+{% endblock %}

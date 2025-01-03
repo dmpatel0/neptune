@@ -1,3 +1,1 @@
-./configure
-make
-make install
+cd ./ta-lib && autoconf && ./configure && make && make install

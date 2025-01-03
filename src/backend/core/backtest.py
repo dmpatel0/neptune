@@ -25,7 +25,7 @@ def get_metrics(stock, sDate, eDate, useStrategy, interval):
     results = bt.run(short_window=12, long_window=24)
     metrics = results[:20]
 
-    bt.plot(filename='frontend/templates/graph.html', open_browser=False)
+    bt.plot(filename='src/frontend/templates/graph.html', open_browser=False)
 
     return metrics
 
