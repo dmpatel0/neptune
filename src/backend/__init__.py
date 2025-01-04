@@ -12,6 +12,10 @@ def create_app():
     @app.route('/backtest')
     def backtest_page():
         return render_template('backtest.html')
+
+    @app.route('/login')
+    def login_page():
+        return render_template('login.html')
     
     app.register_blueprint(api_routes)
     
