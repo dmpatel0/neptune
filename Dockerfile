@@ -1,7 +1,7 @@
-FROM ghcr.io/dmpatel0/neptune-base-fix:0.1
+FROM ghcr.io/dmpatel0/neptune-base-fix:latest
 
 WORKDIR /usr/neptune
-
+ 
 COPY requirements.txt ./
 COPY ta-lib ./
 COPY compile-ta-lib.sh ./
