@@ -18,3 +18,9 @@ def run_backtest():
 @api_routes.route('/api/load_graph', methods=['GET'])
 def load_graph():
     return send_file('../frontend/templates/graph.html', mimetype='text/html')
+
+@api_routes.route('/api/login', methods=['POST'])
+def login():
+    date = request.json
+    user = data.get('username')
+    password = data.get('password')

@@ -1,0 +1,1 @@
+docker build -t ghcr.io/dmpatel0/neptune-amd64:1.1 . && docker run -p 5000:5000 ghcr.io/dmpatel0/neptune-amd64:1.1

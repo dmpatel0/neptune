@@ -1,12 +1,8 @@
-FROM ghcr.io/dmpatel0/neptune-base-fix:latest
+FROM ghcr.io/dmpatel0/neptune-amd64:1.1
 
 WORKDIR /usr/neptune
  
 COPY requirements.txt ./
-COPY ta-lib ./
-COPY compile-ta-lib.sh ./
-
-RUN chmod +x ./compile-ta-lib.sh && ./compile-ta-lib.sh
 
 RUN pip3 install -r requirements.txt
 
