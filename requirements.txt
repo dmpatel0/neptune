@@ -7,4 +7,5 @@ numpy==1.26.4
 ta-lib
 pandas
 pyodbc
+python-dotenv
 yfinance

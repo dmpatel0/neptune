@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify, send_file
 from ..core.backtest import get_metrics
+from ..database.db import create_connection
 import json
 
 api_routes = Blueprint('api_routes', __name__)
@@ -21,6 +22,31 @@ def load_graph():
 
 @api_routes.route('/api/login', methods=['POST'])
 def login():
-    date = request.json
-    user = data.get('username')
-    password = data.get('password')
+
+    connection = create_connection()
+    cursor = connection.cursor()
+    data = request.get_json()
+
+    username = data['username']
+    password = data['password']
+
+    try:
+        query = 'SELECT * FROM Users WHERE Username = ?'
+
+        cursor.execute(query, username)
+        result = cursor.fetchone()
+
+        if result:
+            db_uid, db_username, db_passcode = result
+
+            if(password == db_passcode):
+                return {"response":"USER AUTH SUCCESS", "status_code":200}
+            else:
+                return {"response":"AUTH FAILED", "status_code":400}
+        
+        else:
+            return {"response":'USER NOT FOUND', "status_code":400}
+
+    finally:
+        cursor.close()
+        connection.close()
