@@ -2,9 +2,14 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="container text-center mt-5">
-    <h1>NEPTUNE</h1>
-    <p class="lead">Your go-to platform for stock market backtesting. Analyze your trading strategies and optimize your investments with ease.</p>
+<div class="container main-content text-center">
+    <h1>Welcome To Neptune</h1>
+    <p class="lead">A place where you can learn about the market and back-test trading strategies</p>
     <a href="/backtest" class="btn btn-primary">Get Started</a>
 </div>
+<script>
+    window.onload = function() {
+        document.querySelector('.main-content').style.opacity = 1;
+    }
+</script>
 {% endblock %}
