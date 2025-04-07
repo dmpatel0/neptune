@@ -5,12 +5,15 @@ document.getElementById('submitButton').addEventListener('click', function(e) {
     const data = {};
     
     formData.forEach((value, key) => {
-        data[key] = value;
+        data[key] = value
+        console.log(data[key])
     });
+
+    console.log('TEST')
 
     if(data['ticker'] === "" | data['sDate'] === "" | data['eDate'] === "" | data['strat'] === "") {
         console.log("Required fields empty. Doing nothing.")
-        alert('Please fill in all the required fields.')
+        alert('Please fill in all the required fields. TEST')
         return
     }
 

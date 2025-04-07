@@ -2,3 +2,5 @@ venv/
 .git
 .gitignore
 .env
+ta-lib/ 
+ta-lib.tar.gz
