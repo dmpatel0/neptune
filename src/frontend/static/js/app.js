@@ -34,6 +34,8 @@ document.getElementById('submitButton').addEventListener('click', function(e) {
         document.getElementById('sharpeRatio').innerText = round(metrics['Sharpe Ratio'])
         document.getElementById('annVolatility').innerText = round(metrics['Volatility (Ann.) [%]'])
         
+        updateMetricColors()
+
         fetch('api/load_graph')
             .then(response => response.text())
             .then(data => {

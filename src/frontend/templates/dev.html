@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-custom">
         <a class="navbar-brand navbar-text-custom" href="/">NEPTUNE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -36,17 +35,69 @@
         </div>
     </nav>
 
-    <div class="container main-content text-center">
-        <h1>Welcome To Neptune</h1>
-        <p class="lead">A place where you can learn about the market and back-test trading strategies</p>
-        <a href="/backtest" class="btn btn-primary">Get Started</a>
+    <div class="container-fluid mt-5">
+        <h1 class="text-center">Input Your Data</h1>
+        <div class="d-flex justify-content-center" id="form">
+            <form class="form-inline justify-content-center " id="backtestForm">
+                <div class="form-group mb-2">
+                    <input name="ticker" class="input-custom form-control" id="ticker" type="text" placeholder="Ticker">
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input name="cash" class="input-custom form-control" id="cash" type="number" placeholder="Starting Cash">
+                </div>
+                <div class="form-group mb-2">
+                    <input name="sDate" class="input-custom form-control" id="sDate" type="date" placeholder="Start Date">
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input name="eDate" class="input-custom form-control" id="eDate" type="date" placeholder="End Date">
+                </div>
+                <div class="form-group mb-2">
+                    <select name="strat" class="select-custom form-control" id="strat" type="text" placeholder="Strategy">
+                        <option value="SMA">SMA Crossover</option>
+                        <option value="EMA">EMA Crossover</option>
+                    </select>
+                </div>
+            </form>
+            <div id="submitButton">
+                <button class="btn btn-primary mb-2" type="submit">BACKTEST</button>
+            </div>
+        </div>
+        <div id="metricsContainer" class="d-flex flex-row justify-content-center w-100">
+            <div class="d-flex justify-content-center align-items-end w-75">
+                <div class="metricContainer">
+                    <div class="metric">
+                        <div class="labels">Buy & Hold Return [%]</div>
+                        <div class="metrics">N/A</div>
+                    </div>
+                </div>
+                <div class="metricContainer">
+                    <div class="metric">
+                        <div class="labels">Strategy Return [%]</div>
+                        <div class="metrics">N/A</div>
+                    </div>
+                </div>
+                <div class="metricContainer">
+                    <div class="metric">
+                        <div class="labels">Annual Return [%]</div>
+                        <div class="metrics">N/A</div>
+                    </div>
+                </div>
+                <div class="metricContainer">
+                    <div class="metric">
+                        <div class="labels">Sharpe Ratio</div>
+                        <div class="metrics">N/A</div>
+                    </div>
+                </div>
+                <div class="metricContainer">
+                    <div class="metric">
+                        <div class="labels">Ann. Volatility [%]</div>
+                        <div class="metrics">N/A</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="graphContainer"></div>
     </div>
-
-    <script>
-        window.onload = function() {
-            document.querySelector('.main-content').style.opacity = 1;
-        }
-    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
