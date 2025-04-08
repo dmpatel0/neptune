@@ -1,0 +1,1 @@
+docker build -t ghcr.io/dmpatel0/neptune:$1 .

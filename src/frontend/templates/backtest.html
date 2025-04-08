@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container-fluid mt-5">
-    <h1 class="text-center">Input Your Data</h1>
+    <h1 class="text-center pb-4">Input Your Data</h1>
     <div class="d-flex justify-content-center" id="form">
         <form class="form-inline justify-content-center " id="backtestForm">
             <div class="form-group mb-2">
@@ -30,24 +30,24 @@
         </div>
     </div>
     <div id="metricsContainer" class="d-flex flex-row justify-content-center w-100">
-        <div class="d-flex justify-content-center align-items-end w-75">
-            <div class="metricContainer">
+        <div class="d-flex justify-content-center align-items-end">
+            <div id="bhPercentContainer" class="metricContainer">
                 <div id="bhPercentLabel" class="labels">Buy & Hold Return [%]</div>
                 <div id="bhPercent" class="metrics">N/A</div>
             </div>
-            <div class="metricContainer">
+            <div id="returnPercentContainer" class="metricContainer">
                 <div id="returnPercentLabel" class="labels">Strategy Return [%]</div>
                 <div id="returnPercent" class="metrics">N/A</div>
             </div>
-            <div class="metricContainer">
+            <div id="returnAnnualContainer" class="metricContainer">
                 <div id="returnAnnualLabel" class="labels">Annual Return [%]</div>
                 <div id="returnAnnual" class="metrics">N/A</div>
             </div>
-            <div class="metricContainer">
+            <div id="sharpeRatioContainer" class="metricContainer">
                 <div id="sharpeRatioLabel" class="labels">Sharpe Ratio</div>
                 <div id="sharpeRatio" class="metrics">N/A</div>
             </div>
-            <div class="metricContainer">
+            <div id="annVolatilityContainer" class="metricContainer">
                 <div id="annVolatilityLabel" class="labels">Ann. Volatility [%]</div>
                 <div id="annVolatility" class="metrics">N/A</div>
             </div>

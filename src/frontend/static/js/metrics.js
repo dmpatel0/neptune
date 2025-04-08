@@ -1,15 +1,16 @@
-const sharpeRatio = parseFloat(document.getElementById('sharpeRatioValue').innerText);
-const annualReturn = parseFloat(document.getElementById('annualReturnValue').innerText);
-const volatility = parseFloat(document.getElementById('volatilityValue').innerText);
-const buyHoldReturn = parseFloat(document.getElementById('buyHoldReturnValue').innerText);
-const strategyReturn = parseFloat(document.getElementById('strategyReturnValue').innerText);
-
 function updateMetricColors() {
+
+    const sharpeRatio = parseFloat(document.getElementById('sharpeRatio').innerText);
+    const annualReturn = parseFloat(document.getElementById('returnAnnual').innerText);
+    const volatility = parseFloat(document.getElementById('annVolatility').innerText);
+    const buyHoldReturn = parseFloat(document.getElementById('bhPercent').innerText);
+    const strategyReturn = parseFloat(document.getElementById('returnPercent').innerText);
+
     const sharpeRatioContainer = document.getElementById('sharpeRatioContainer');
-    const annualReturnContainer = document.getElementById('annualReturnContainer');
-    const volatilityContainer = document.getElementById('volatilityContainer');
-    const buyHoldReturnContainer = document.getElementById('buyHoldReturnContainer');
-    const strategyReturnContainer = document.getElementById('strategyReturnContainer');
+    const annualReturnContainer = document.getElementById('returnAnnualContainer');
+    const volatilityContainer = document.getElementById('annVolatilityContainer');
+    const buyHoldReturnContainer = document.getElementById('bhPercentContainer');
+    const strategyReturnContainer = document.getElementById('returnPercentContainer');
 
     if (sharpeRatio > 0.75) {
         sharpeRatioContainer.classList.remove('default', 'red', 'yellow');

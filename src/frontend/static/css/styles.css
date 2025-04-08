@@ -72,7 +72,7 @@ body {
     margin: 20px auto; /* Center the container */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
     width: 90%; /* Adjust width as needed */
-    height: 400px; /* Set a fixed height for the graph */
+    height: 700px; /* Set a fixed height for the graph */
     display: flex; /* Flexbox for layout */
     justify-content: center; /* Center the graph */
     align-items: center; /* Center the graph vertically */
@@ -81,30 +81,31 @@ body {
 .metricContainer {
     background: #1a1a1a; /* Dark background for the outer div */
     border-radius: 15px; /* Rounded corners */
-    padding: 10px; /* Padding for spacing */
+    padding: 15px; /* Padding for spacing */
     margin: 10px; /* Margin for spacing between metrics */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.2); /* Shadow for depth and inner shadow */
     display: flex; /* Flexbox for layout */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items */
-    width: 250px; /* Fixed width */
-    height: 100px; /* Fixed height */
+    width: 200px; /* Fixed width */
+    height: 125px; /* Fixed height */
 }
 
 .metricContainer.default {
-    background: #1a1a1a; /* Default color */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.2); /* Shadow for depth and inner shadow */
 }
 
 .metricContainer.green {
-    background: #2e7d32; /* Green for positive metrics */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 0 15px rgb(0, 255, 76); /* Shadow for depth and inner shadow */
 }
 
 .metricContainer.red {
-    background: #c62828; /* Red for negative metrics */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 0 15px rgb(255, 0, 0); /* Shadow for depth and inner shadow */
+
 }
 
 .metricContainer.yellow {
-    background: #ffd700; /* Yellow for neutral metrics */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 0 15px rgb(255, 255, 0); /* Shadow for depth and inner shadow */
 }
 
 .metric {
