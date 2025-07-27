@@ -63,6 +63,9 @@ body {
 
 .login-container {
     border: black 2px solid;
+    width: 50%;
+    justify-self: center;
+    margin-top: 10vh;
 }
 
 #graphContainer {
@@ -174,4 +177,26 @@ body {
         opacity: 1;
         transform: translateY(0); /* End at original position */
     }
+}
+
+.learn-container {
+    width: 100%; /* Slightly in from the edge */
+    height: 100%; /* Allow it to extend past the bottom if needed */
+    padding: 20px; /* Add some padding for aesthetics */
+    background-color: #2d2d2d;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
+}
+
+.test-container {
+    width: 100%;
+    height: 1000px;
+}
+
+.frame {
+    width: 100%;
+    height: 1000px;
+    border: none;
+    border-radius: 10px;
 }

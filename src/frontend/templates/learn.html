@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Learn{% endblock %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="learn-container">
+        <div class="test-container">
+            <a class="learn-heading" href="{{ url_for('learn_page', page='technical') }}">Technical Analysis</a>
+            <h1 class="learn-heading" href="/notes/fundamental.html">Fundamental Analysis</h1>
+        </div>
+    </div>
+</div>
+<script>
+</script>
+{% endblock %}

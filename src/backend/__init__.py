@@ -16,6 +16,13 @@ def create_app():
     @app.route('/login')
     def login_page():
         return render_template('login.html')
+
+    @app.route('/learn')
+    @app.route('/learn/<path:page>')
+    def learn_page(page=None):
+        if page:
+            return render_template(f'learn/{page}.html')
+        return render_template('learn.html')
     
     app.register_blueprint(api_routes)
     
